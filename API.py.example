@@ -1,0 +1,9 @@
+API_ID = *******  # Replace with your API ID
+API_HASH = "*****************************"  # Replace with your API Hash
+CHANNEL_TARGET = ("***********",)  # Target channel username (without https://t.me/) or chat ID
+BASE_DIR = rf"/home/han/GitHub/earthquake-dissemination/"
+
+# Storage protection constraints
+MAX_BACKLOG_DAYS = 30  # Fetch history up to 30 days back
+MAX_MESSAGE_LIMIT = 200  # Maximum message count limit during initial sync
+MAX_FILE_SIZE_MB = 15  # Skip download if file size exceeds 15 MB

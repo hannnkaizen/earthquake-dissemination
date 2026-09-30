@@ -1,4 +1,5 @@
 
 /media
-API.txt
 telegram_dissemination.txt
+API.py
+*.session

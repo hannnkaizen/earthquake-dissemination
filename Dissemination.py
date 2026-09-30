@@ -3,20 +3,20 @@ import os
 from telethon import TelegramClient, events
 
 # ==================== CONFIGURATION ====================
-API_DIR = rf"/home/han/GitHub/earthquake-dissemination/API.txt"
-CHANNEL_TARGET = (
-    "integrasidata"  # Target channel username (without https://t.me/) or chat ID
+from API import (
+    API_HASH,
+    API_ID,
+    CHANNEL_TARGET,
+    BASE_DIR,
+    MAX_BACKLOG_DAYS,
+    MAX_MESSAGE_LIMIT,
+    MAX_FILE_SIZE_MB
 )
 
 # Storage paths (adjust according to your system environment)
-BASE_DIR = rf"/home/han/GitHub/earthquake-dissemination/"
 MEDIA_DIR = os.path.join(BASE_DIR, "media")
 OUTPUT_TXT = os.path.join(BASE_DIR, "telegram_dissemination.txt")
 
-# Storage protection constraints
-MAX_BACKLOG_DAYS = 30  # Fetch history up to 30 days back
-MAX_MESSAGE_LIMIT = 200  # Maximum message count limit during initial sync
-MAX_FILE_SIZE_MB = 15  # Skip download if file size exceeds 15 MB
 # =======================================================
 
 os.makedirs(MEDIA_DIR, exist_ok=True)
@@ -30,7 +30,6 @@ client = TelegramClient(
     retry_delay=5,
     auto_reconnect=True,
 )
-
 
 def check_media_size(message):
   """Verify media size before downloading to protect storage capacity."""

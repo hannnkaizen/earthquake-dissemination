@@ -3,14 +3,14 @@ import os
 from telethon import TelegramClient, events
 
 # ==================== CONFIGURATION ====================
-API_ID = 34916208  # Replace with your API ID
-API_HASH = "18ecfd5cb873977b82232ab2890fd659"  # Replace with your API Hash
+API_ID = 32622253  # Replace with your API ID
+API_HASH = "6a4a73e50d131a6fa42f4589a641db4c"  # Replace with your API Hash
 CHANNEL_TARGET = (
     "integrasidata"  # Target channel username (without https://t.me/) or chat ID
 )
 
 # Storage paths (adjust according to your system environment)
-BASE_DIR = r"/home/han/GitHub/earthquake-dissemination/"
+BASE_DIR = rf"/home/han/GitHub/earthquake-dissemination/"
 MEDIA_DIR = os.path.join(BASE_DIR, "media")
 OUTPUT_TXT = os.path.join(BASE_DIR, "telegram_dissemination.txt")
 
